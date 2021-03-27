@@ -1,0 +1,43 @@
+.studentSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.formCard {
+  width: 30%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.tableSection {
+  width: 60%;
+}
+
+.filtering {
+  display: flex;
+  justify-content: space-between;
+}
+.filtering .byname button {
+  margin-left: 2rem;
+}
+.tables {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.tables table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tables table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.tables table th, td {
+  padding: 12px 15px;
+}

@@ -1,0 +1,12 @@
+<mat-card>
+  <form (submit)="onRegister(registerForm)" #registerForm="ngForm">
+    <mat-form-field>
+      <input type="text" name="email" placeholder="Enter email" matInput ngModel>
+    </mat-form-field><br>
+    <mat-form-field>
+      <input type="password" name="password" placeholder="Enter password" matInput ngModel>
+    </mat-form-field><br>
+    <button mat-raised-button color="accent" type="submit">Register</button>
+  </form>
+</mat-card>
+

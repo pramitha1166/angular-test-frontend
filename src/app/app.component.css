@@ -1,0 +1,19 @@
+.navbar {
+  justify-content: space-between;
+}
+
+.navbar span {
+  padding-left: 1rem;
+}
+
+.navbar span a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 2rem;
+}
