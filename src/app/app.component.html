@@ -1,13 +1,13 @@
-<mat-toolbar class="navbar" color="primary">
-  <h2>Student App</h2>
-  <div>
+<div class="navbar" color="primary">
+  <h2>TestApp</h2>
+  <div class="nav-menu">
     <span><a routerLink="/">home</a></span>
     <span><a routerLink="/students">students</a></span>
     <span><a *ngIf="!_authservice.loggedIn()" routerLink="/login">login</a></span>
     <span><a *ngIf="!_authservice.loggedIn()" routerLink="/register">register</a></span>
     <span><a *ngIf="_authservice.loggedIn()" (click)="logout()">logout</a></span>
   </div>
-</mat-toolbar>
+</div>
 <main>
   <router-outlet></router-outlet>
 </main>

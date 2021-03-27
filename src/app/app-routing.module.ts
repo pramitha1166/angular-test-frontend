@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -23,6 +24,10 @@ const routes: Routes = [
     path: 'students',
     component: StudentsComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

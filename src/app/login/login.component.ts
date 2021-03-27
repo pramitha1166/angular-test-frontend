@@ -2,6 +2,7 @@ import { NgForm } from '@angular/forms';
 import { Component } from "@angular/core";
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -24,11 +25,16 @@ export class LoginComponent {
     this._auth.loginUser(this.loginUserData)
     .subscribe(
       res => {
-        console.log(res)
         localStorage.setItem('token', res.token)
         this._router.navigate([''])
       },
-      err => console.log(err)
+      err => {
+        if(err instanceof HttpErrorResponse) {
+          if(err.status === 401) {
+            alert('Unauthorized User! Please Enter Valid Email and Password')
+          }
+        }
+      }
     )
   }
 

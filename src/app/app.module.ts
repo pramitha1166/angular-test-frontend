@@ -24,6 +24,7 @@ import { StudentsComponent } from './students/students.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     LoginComponent,
     RegisterComponent,
     StudentsComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

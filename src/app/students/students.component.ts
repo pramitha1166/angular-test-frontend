@@ -24,10 +24,10 @@ export class StudentsComponent {
     this.service.fetchStudents().subscribe(
       res => {
         this.students = res;
-        console.log(res)
+        //console.log(res)
       },
       err => {
-        console.log(err)
+        //console.log(err)
         if(err instanceof HttpErrorResponse) {
           if(err.status === 401 || err.status === 500) {
             this._router.navigate(['login'])
@@ -35,7 +35,7 @@ export class StudentsComponent {
         }
       }
     );
-    console.log(this.students)
+    //console.log(this.students)
   }
 
   saveStudent(form: NgForm) {
@@ -54,11 +54,13 @@ export class StudentsComponent {
       this.service.saveStudent(studentData).subscribe(
         res => {
           this.loading = true;
-          console.log(res)
+         // console.log(res)
 
           this.students.push(res)
         },
-        err => console.log(err)
+        err => {
+          alert('Error with saving data!')
+        }
       )
 
     }
@@ -73,13 +75,15 @@ export class StudentsComponent {
   }
 
   Delete(id:any) {
-    alert('Delete '+ id)
+    //alert('Delete '+ id)
     this.service.deleteStudent(id).subscribe(
       res => {
         this.students.splice(res._id,1)
-        console.log(res)
+        alert('Deleted!')
       },
-      err => console.log(err)
+      err => {
+        alert('Error with deleting data!')
+      }
     )
   }
 
