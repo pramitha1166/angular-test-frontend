@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class StudentService {
 
-  private _studentUrl = "http://localhost:3000/api/students/"
+  private _studentUrl = "https://student-backend-new.herokuapp.com/api/students/"
 
   constructor(private http: HttpClient) {}
 

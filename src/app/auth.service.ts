@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  private _registerUrl = "http://localhost:3000/api/register"
-  private _loginUrl = "http://localhost:3000/api/login"
+  private _registerUrl = "https://student-backend-new.herokuapp.com/api/register"
+  private _loginUrl = "https://student-backend-new.herokuapp.com/api/login"
   constructor(private http: HttpClient) { }
 
   registerUser(user: any) {
