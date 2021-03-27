@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     path: 'students',
     component: StudentsComponent,
-    //canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   }
 ];
 
